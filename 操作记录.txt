@@ -1,3 +1,9 @@
 touch 操作记录.txt   创建一个操作记录的文本，用来记录执行的操作
 
 git init   将这个目录变成git管理的仓库
+
+git add fileName   将这个文件添加到git的暂存区
+
+git commit -m 'remark' 将暂存区内容一次性提交到工作区间
+
+git commit -am ‘remark’ 合并 add 和 commit 命令
