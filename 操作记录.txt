@@ -19,4 +19,6 @@ git reset --hard HEAD^^ 回退到上两个版本
 git reset --hard HEAD~10 回退到上10个版本
 git reset --hard commit_id 回退或恢复到指定版本，commit_id 不必写全，git会自动查找
 
---------------------------------------------------------
+git diff HEAD -- fineName 查看工作区和版本库里面最新版本区别
+
+
