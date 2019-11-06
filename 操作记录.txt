@@ -21,4 +21,5 @@ git reset --hard commit_id 回退或恢复到指定版本，commit_id 不必写�
 
 git diff HEAD -- fineName 查看工作区和版本库里面最新版本区别
 
+小结：git中有工作区和暂存区，每次add命令，将工作区的内容添加到暂存区，commit的时候，将暂存区的内容提交到git版本库中，如果修改的内容不用git add到暂存区，commit就不会提交到版本库
 
