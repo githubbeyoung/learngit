@@ -6,7 +6,7 @@ git add fileName   将这个文件添加到git的暂存区
 
 git commit -m 'remark' 将暂存区内容一次性提交到工作区间
 
-git commit -am ‘remark’ 合并 add 和 commit 命令
+git commit -am ‘remark’ 合并 add 和 commit 命令,前提该文件是被跟踪的文件，未被跟踪的文件--即新创建的文件不能使用这个合并命令
 
 git config user.username 'username'   设置用户名
 git config user.email 'email@xxx.com'   设置邮箱
@@ -25,7 +25,7 @@ git diff HEAD -- fineName 查看工作区和版本库里面最新版本区别
 
 git checkout -- fileName  撤销修改，工作区间内修改了文件内容，但是并没有提交到暂存区，即没有add，用这个命令直接撤销修改.注意 这个命令的 -- 很重要，没有它就变成切换到另一个分支的命令
 
-#如何从git上删除一个文件
+#如何从git上删除一个文件，下面三个命令就完成了删除操作，也可省略git add fileName 命令，也可完成删除操作
 rm fileName / git rm fileName 从工作区删除文件
 git add fileName / git add . 将工作区的修改添加到暂存区
 git commit -m 'xxx' 将暂存区的数据提交到版本库
