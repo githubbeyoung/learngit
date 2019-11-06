@@ -7,3 +7,16 @@ git add fileName   将这个文件添加到git的暂存区
 git commit -m 'remark' 将暂存区内容一次性提交到工作区间
 
 git commit -am ‘remark’ 合并 add 和 commit 命令
+
+git config user.username 'username'   设置用户名
+git config user.email 'email@xxx.com'   设置邮箱
+
+git log 查看历史记录
+git reflog 记录每次的命令，也能查看 commit_id ，commit_id 可用于回退或恢复到指定版本
+
+git reset --hard HEAD^ 回退到上一个版本
+git reset --hard HEAD^^ 回退到上两个版本
+git reset --hard HEAD~10 回退到上10个版本
+git reset --hard commit_id 回退或恢复到指定版本，commit_id 不必写全，git会自动查找
+
+
