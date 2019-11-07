@@ -70,6 +70,21 @@ Git用 <<<<<<<  , ======= , >>>>>>> 标记出不同分支的内容，手动修�
 通常，合并分支时候，如果可能，Git会用Fast forward模式，但这种模式下，删除分支后，会丢掉分子信息，如果强制禁用Fast forward模式，Git在merge时生成一个新的commit，这样，从分支历史上就可以看出分支信息。 --no-f 为禁用 Fast forward 模式
 git merge --no-f -m '在no-ff模式下合并分支'
 
+#stash
+有一个场景，在dev分支上实现一个需求，需要用一天的时间才能开发完，干了半天，线上提一个bug，必须马上解决，这时你的开发没完成，不能提交，还要解决bug，这时需要将开发的代码暂时保存起来，但是还没有提交到暂存区，用git stash命令，接着用git status查看，发现工作区是干净的，这时候就可以解决bug了，把bug解决完提交代码，回过头继续开发需求，需要找到我们开发到一半的代码，用 git stash list查看，代码还在，需要恢复一下，两个方法，一、git stash apply 恢复，恢复后 stash内容不会删除，用git stash drop来删除
+；二、git stash pop 恢复的同时，把stash内容也删除。
+
+git stash  把当前工作空间保存起来，并没有添加到git的暂存区
+git stash list  查看被保存起来的工作空间
+git stash apply 恢复被保存的工作空间，但是不会删除stash内容
+git stash drop  删除stash内容
+git stash pop  恢复被保存的工作空间同时删除stash的内容
+git stash  apply stash@{0} ，恢复指定的stash
+
+
+
+
+
 
 
 
