@@ -81,6 +81,39 @@ git stash drop  删除stash内容
 git stash pop  恢复被保存的工作空间同时删除stash的内容
 git stash  apply stash@{0} ，恢复指定的stash
 
+#Feature 分支
+添加一个新功能时，不希望一些实验性质的代码把主分支搞乱，所以添加一个新功能时需要新建一个feature分支，在上面开发，完成后合并，删除该分支，现在开发一个新需求，开发完成时接到上级命令，功能砍掉，代码涉密，必须就地销毁，我们用 git branch -d feature 删除这个分支，Git提醒 feature分支还没有被合并，如果删除，将丢失修改，如果强行删除需要用到大写的 -D参数
+
+git branch -D 分支名   强行删除未合并的分支
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
