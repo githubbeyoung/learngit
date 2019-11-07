@@ -43,6 +43,11 @@ git commit -m 'xxx' 将暂存区的数据提交到版本库
 #拉取远程仓库上的内容
 git pull
 
+#从远程仓库拉取内容
+1.登录GitGub,在上面创建一个新的仓库，如果已经有一个仓库，则直接拉取该仓库内容
+2.新建一个文件夹，打开Git Base Here（按住Shift键，鼠标右击选择）,在命令窗口输入
+  命令：git clone git@github.com:GitHub账户名/仓库名.git ,项目就从远程拉取到本地
+
 
 
 
