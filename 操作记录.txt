@@ -8,6 +8,11 @@ git commit -m 'remark' 将暂存区内容一次性提交到工作区间
 
 git commit -am ‘remark’ 合并 add 和 commit 命令,前提该文件是被跟踪的文件，未被跟踪的文件--即新创建的文件不能使用这个合并命令
 
+git add .  把工作区新增的文件和修改的文件都加入到暂存区
+git add -A  把工作区新的文件，修改的文件，删除的文件都加入到暂存区
+命令只能作用域当前目录及子目录
+
+
 git config user.username 'username'   设置用户名
 git config user.email 'email@xxx.com'   设置邮箱
 
