@@ -12,6 +12,13 @@ git add .  把工作区新增的文件和修改的文件都加入到暂存区
 git add -A  把工作区新的文件，修改的文件，删除的文件都加入到暂存区
 命令只能作用域当前目录及子目录
 
+git 中的三类文件
+1.被追踪的（tracked）：已经加入暂存区的
+2.不被追踪的（untracked）：没有加入暂存区的
+3.忽略的（ignored）：忽略那些不需要管理的文件或文件夹
+
+
+
 
 git config user.username 'username'   设置用户名
 git config user.email 'email@xxx.com'   设置邮箱
