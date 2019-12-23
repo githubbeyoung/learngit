@@ -74,7 +74,7 @@ git branch dev  创建一个dev分支
 git checkout dev  切换到dev分支
 git checkout -b dev   创建并切换到dev分支，相当于合并以上两条命令
 
-git branch  列出所有分支，当前分支前面会标一个*号
+git branch  列出本地所有分支，当前分支前面会标一个*号
 
 --把dev分支的工作成果合并到master上
 1.dev分支工作开发完成后，切换到master分支上，在master分支合并dev分支 git checkout master
