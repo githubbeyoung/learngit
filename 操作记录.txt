@@ -28,6 +28,9 @@ git添加忽略文件，分两种情况，第一种，需要忽略的文件是�
 1.在工作区新建一个文件，命名为 .gitignore ,写入需要被忽略的文件
 2.直接将文件添加到版本库，未被追踪的文件就不会再被git管理了
 
+git clean --df 【是从工作目录中移除没有track的文件】
+git rm --cached fileName||path 【将文件或者路径从远程reposity、本地暂存域中删除，在本地工作空间中保留，主要针对和项目本身无关的不小心提交到服务器的文件】
+
 
 git config user.username 'username'   设置用户名
 git config user.email 'email@xxx.com'   设置邮箱
@@ -68,6 +71,7 @@ git pull
 1.登录GitGub,在上面创建一个新的仓库，如果已经有一个仓库，则直接拉取该仓库内容
 2.新建一个文件夹，打开Git Base Here（按住Shift键，鼠标右击选择）,在命令窗口输入
   命令：git clone git@github.com:GitHub账户名/仓库名.git ,项目就从远程拉取到本地
+        git clone -b 分支名 资源地址 --clone指定分支
 
 #分支管理 创建与合并分支
 git branch dev  创建一个dev分支
@@ -75,6 +79,7 @@ git checkout dev  切换到dev分支
 git checkout -b dev   创建并切换到dev分支，相当于合并以上两条命令
 
 git branch  列出本地所有分支，当前分支前面会标一个*号
+git branch -a 【列出本地+远程所有分支】
 
 --把dev分支的工作成果合并到master上
 1.dev分支工作开发完成后，切换到master分支上，在master分支合并dev分支 git checkout master
