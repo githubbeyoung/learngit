@@ -80,7 +80,6 @@ git checkout -b dev   创建并切换到dev分支，相当于合并以上两条�
 
 git branch  列出本地所有分支，当前分支前面会标一个*号
 git branch -a 【列出本地+远程所有分支】
-git remote prune origin 同步本地远程分支
 
 
 --把dev分支的工作成果合并到master上
