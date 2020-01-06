@@ -87,7 +87,7 @@ git checkout -b 本地分支名称 origin/远程分支名  自动创建一个本
 2.git merge dev 完成将dev分支成果合并到master上 ，git merge命令用于合并指定分支到当前分支。
 合并完成后，提示 Fast-forward ,Git告诉我们，这次合并是快进模式，就是把master指向dev的当前提交
 
-git branch -d dev  删除dev分支
+git branch -D dev  删除dev分支
 git push origin :远程分支名
 
 #解决冲突
