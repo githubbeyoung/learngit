@@ -80,7 +80,7 @@ git checkout -b dev   创建并切换到dev分支，相当于合并以上两条�
 
 git branch  列出本地所有分支，当前分支前面会标一个*号
 git branch -a 【列出本地+远程所有分支】
-
+git checkout -b 本地分支名称 origin/远程分支名  自动创建一个本地分支，与指定的远程分支关联起来
 
 --把dev分支的工作成果合并到master上
 1.dev分支工作开发完成后，切换到master分支上，在master分支合并dev分支 git checkout master
@@ -88,6 +88,7 @@ git branch -a 【列出本地+远程所有分支】
 合并完成后，提示 Fast-forward ,Git告诉我们，这次合并是快进模式，就是把master指向dev的当前提交
 
 git branch -d dev  删除dev分支
+git push origin :远程分支名
 
 #解决冲突
 冲突的原因是不同的分支在同一个文件提交了内容，导致git不知道以哪个内容为准，这时必须手动解决冲突再提交，比如在feature1分支上修改最后一行的内容，保存提交。再在master分支上修改最后一行的内容，保存后提交，这时在master分支上合并feature1分支的内容，Git无法快速合并，只能试图把各自的修改合并起来，但这种合并就可能会有冲突。
@@ -112,6 +113,31 @@ git stash  apply stash@{0} ，恢复指定的stash
 添加一个新功能时，不希望一些实验性质的代码把主分支搞乱，所以添加一个新功能时需要新建一个feature分支，在上面开发，完成后合并，删除该分支，现在开发一个新需求，开发完成时接到上级命令，功能砍掉，代码涉密，必须就地销毁，我们用 git branch -d feature 删除这个分支，Git提醒 feature分支还没有被合并，如果删除，将丢失修改，如果强行删除需要用到大写的 -D参数
 
 git branch -D 分支名   强行删除未合并的分支
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+场景一：远程分支有5个，本地有2个，使用命令git branch -a 只显示本地的两个分支，不显示远程分支，需要使用 git feach 命令获取远程最新分支
+        但是使用该命令，还是不能获取最新分支，需要检查config配置项，修改如下，再使用 git fetch ，再使用git branch -a 就可以查看所有分支。 
+		再使用 git checkout -b 本地分支名 origin/远程分支名 ,表示新建本地分支并切换与指定远程分支相关联
+		[remote "origin"]
+	    url = http://git.300.cn/NRCP/nrcp-api/api-order-web.git
+	    fetch = +refs/heads/*:refs/remotes/origin/*
+		
+		
 
 
 
