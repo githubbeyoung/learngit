@@ -67,6 +67,13 @@ git commit -m 'xxx' 将暂存区的数据提交到版本库
 #拉取远程仓库上的内容
 git pull
 
+#每次拉取和推送都需要输入用户名密码，如何解决
+进入 .git/config 目录下，将url = https://github.com/githubbeyoung/learngit.git 修改为 https://用户名:密码@github.com/githubbeyoung/learngit.git 
+
+#本地创建一个分支，推送到远程分支上
+git checkout -b dev :创建并切换到dev分支 
+git push --set-upstream origin dev ：将dev分支推送到远程仓库
+
 #从远程仓库拉取内容
 1.登录GitGub,在上面创建一个新的仓库，如果已经有一个仓库，则直接拉取该仓库内容
 2.新建一个文件夹，打开Git Base Here（按住Shift键，鼠标右击选择）,在命令窗口输入
